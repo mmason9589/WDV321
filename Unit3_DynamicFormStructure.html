@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>WDV321 Advanced Javascript</title>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">	
+</script>
+	
+	<style>
+	
+		p.addComplaints{
+			display: none;
+		}
+		
+		p.addTechnical{
+			display: none;
+		}
+		
+		p.addIssues{
+			display: none;
+		}
+		
+	
+	</style>
+	
+	<script>
+	
+		let contactReasons = ["Select a Reason", "Complaints", "Technical Problems", "Product Issues"];
+		
+		let contactComplaints = ["Select a complaint", "Rude employees", "Loud employees", "No employees", "Too many employees"];
+		
+		//let contactTechnical = ["Slow internet", "No internet", "Spotty internet", "Stolen Connection"];
+		
+		//let contactIssues = ["Select a Product Issue", "Broken product", "No product", "Wrong product", "Stolen Product"];
+
+		
+		function selectedReason()
+		{
+			var reasonValue = document.querySelector("#contactType").value;
+			
+			if(reasonValue == contactReasons[0])
+				{
+					document.querySelector("p.addComplaints").style.display = "none";
+					document.querySelector("p.addTechnical").style.display = "none";
+					document.querySelector("p.addIssues").style.display = "none";
+				}
+			
+				else if(reasonValue == contactReasons[1])
+				{
+					document.querySelector("p.addComplaints").style.display = "block";
+					
+					document.querySelector("p.addTechnical").style.display = "none";
+					document.querySelector("p.addIssues").style.display = "none";
+					
+				}
+				else if(reasonValue == contactReasons[2])
+					{
+						document.querySelector("p.addTechnical").style.display = "block";
+						
+						document.querySelector("p.addComplaints").style.display = "none";
+						document.querySelector("p.addIssues").style.display = "none";
+					}
+				else
+					{
+						document.querySelector("p.addIssues").style.display = "block";
+						
+						document.querySelector("p.addComplaints").style.display = "none";
+						document.querySelector("p.addTechnical").style.display = "none";
+					}
+			
+		}
+	
+	</script>
+
+</head>
+
+
+
+<body>
+
+<h1>WDV321 Advanced Javascript</h1>
+
+<h2>Dynamic Form Structure - Assignment</h2>
+
+<p>Use this page as the basis for your assignment. Given the drop down list provided on this page please do the following things.</p>
+
+<p>
+
+  <label>Please Select your reason for contacting us.
+
+    <select name="contactType" id="contactType" onChange="selectedReason()">
+
+		<script>
+		
+			for(i=0; i < contactReasons.length; i++)
+			{
+				document.write("<option>" + contactReasons[i] + "</option>");	
+				
+			}
+		
+		</script>
+
+    </select>
+
+  </label>
+	
+</p>
+	
+
+	
+	
+<p class = "addComplaints">
+
+  <label>Please Select one of the following complaints.
+
+    <select name="contactType" id="contactType2">
+
+		<script>
+		
+			for(i=0; i < contactComplaints.length; i++)
+			{
+				document.write("<option>" + contactComplaints[i] + "</option>");	
+				
+			}
+		
+		</script>
+
+    </select>
+
+  </label>
+	
+</p>
+	
+	
+
+	
+<p class = "addTechnical">
+
+  <label>Please Select any of the following Technical Problems. <br>
+
+			<input type="checkbox" value="slow"> Slow Internet <br>
+		 	<input type="checkbox" value="none"> No Internet <br>
+			<input type="checkbox" value="spotty"> Spotty Internet <br>
+			<input type="checkbox" value="stolen"> Stolen Internet
+	
+  </label>
+	
+</p>
+	
+	
+	
+<p class = "addIssues">
+
+  <label>Please Select a Product Issue. <br>
+
+			<input type="radio" name="issue" value="broken"> Broken Product <br>
+		 	<input type="radio" name="issue" value="none"> No Product <br>
+			<input type="radio" name="issue" value="wrong"> Wrong product <br>
+			<input type="radio" name="issue" value="stolen"> Stolen product
+	
+  </label>
+	
+</p>
+	
+
+	
+	
+<ol>
+
+  <li>When  Complaints are selected please dynamically create and display a new drop down list that includes at least four options of your choice.</li>
+
+  <li>When Technical Problems are selected please dynamically create and display at least four types of problems with an associated checkbox.</li>
+
+  <li>When Product Issues are selected please dynamically create and display at least four types options as a grouped set of radio buttons. </li>
+
+  <li>When a new option is selected your script should remove any of the dynamic content. </li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
