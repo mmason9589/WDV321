@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<script>
+	
+	function validate(){
+		
+		var emailAdd = document.querySelector("#validEmail").value;
+		
+		var validate = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAdd);
+		
+		if(validate == true){
+			
+			alert("true");
+		}
+		
+		else{
+			
+			alert("false");
+		}
+	
+	}
+	
+</script>	
+	
+	
+	
+</head>
+<body>
+
+<h1>Validate email address</h1>
+	
+	
+<form method="post">	
+	
+	<p>
+		<label>
+			E-mail: <input type="text" name="emailaddress" id="validEmail">
+  			<input type="submit" onClick="validate()">
+		</label>
+	</p>
+	
+</form>
+
+
+</body>
+</html>
