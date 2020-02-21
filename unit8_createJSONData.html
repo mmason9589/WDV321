@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create JSON Data</title>
+
+	
+	
+</head>
+
+<body>
+	
+	
+	<h3>JavaBook JSON Object</h3>
+	<p id="book1"></p>
+	
+	<h3>VB6Book JSON Object</h3>
+	<p id="book2"></p>
+	
+	<h3>textbook JSON Object</h3>
+	<p id="book3"></p>
+	
+</body>
+	
+	
+	
+	<script>
+	
+		//javascript Objects
+		
+		jsJavaBook = {ISBN: 0-596-0016-2, 
+					  title: "Java and XML", 
+					  price:39.95, 
+					  publisher: "O'Reilly &amp; Associates", 
+					  authorFname: "Brett", 
+				   	  authorLname: "McLaughlin", 
+					  copyright: 2000};
+		
+		jsVBBook = {ISBN:1-861003-32-3, 
+					title: "Professional Visual Basic 6 XML", 
+					price: 49.99, 
+					publisher: "Wrox Press", 
+					authorFname: "James", 
+					authorLname: "Britt", 
+					copyright: 2000};
+		
+		jsTextbook = {jsJavaBook, jsVBBook};
+		
+		
+		
+		
+		//JSON objects
+		
+		
+		JavaBook = {ISBN:"0-596-0016-2", 
+					title: "Java and XML", 
+					price:39.95, 
+					publisher: "O'Reilly &amp; Associates", 
+					authorFname: "Brett", 
+				    authorLname: "McLaughlin", 
+					copyright: 2000};
+		
+		VB6Book = {ISBN:"1-861003-32-3", 
+				   title: "Professional Visual Basic 6 XML", 
+				   price: 49.99, 
+				   publisher: "Wrox Press", 
+				   authorFname: "James", 
+				   authorLname: "Britt", 
+				   copyright: 2000};
+		
+		textbooks = {JavaBook, VB6Book};
+		
+		
+		document.getElementById("book1").innerHTML = JSON.stringify(JavaBook);
+		document.getElementById("book2").innerHTML = JSON.stringify(VB6Book);
+		document.getElementById("book3").innerHTML = JSON.stringify(textbooks);
+		
+	
+	</script>
+	
+	
+	
+	
+	
+</html>
