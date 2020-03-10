@@ -124,6 +124,11 @@
 		
 	}	
 
+	figure:hover{
+		background-color:#FFE678;
+		box-shadow: 4px 4px 4px;
+	}
+
 
 	/*---------toggle switch----------*/
 
