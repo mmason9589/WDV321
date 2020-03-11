@@ -16,8 +16,6 @@
 
 <script>
 
-	let courses = document.querySelector('ul');
-
 	let info = ["Student ID: ", "Student First Name: ", "Student Last Name: ", "Student Major: ", "Student Credits: ", "Student GPA: ", "Student Registration Date: " ]
 	
 	
@@ -40,9 +38,7 @@ function loadDoc() {
 		}
 		document.getElementById("demo").innerHTML = txt;
 		
-		//document.querySelector('#demo').innerHTML = studentJS.student_id;
 		
-      //document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
     }
   };
   xhttp.open("GET", "900006361.js", true);
@@ -69,9 +65,7 @@ function loadDoc() {
 		
 		document.getElementById("demo2").innerHTML = txt;
 		
-		//document.querySelector('#demo').innerHTML = studentJS.student_id;
 		
-      //document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
     }
   };
   xhttp.open("GET", "900668871.js", true);
@@ -97,9 +91,7 @@ var xhttp = new XMLHttpRequest();
 		
 		document.getElementById("demo3").innerHTML = txt;
 		
-		//document.querySelector('#demo').innerHTML = studentJS.student_id;
 		
-      //document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
     }
   };
   xhttp.open("GET", "903998004.js", true);
