@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+	
+<script>
+
+	//
+	//updated file
+	//instead of multiple AJAX call, I simplified it down to one, while looping through the "jsFile" for all javascript files
+	//
+	
+
+	let info = ["Student ID: ", "Student First Name: ", "Student Last Name: ", "Student Major: ", "Student Credits: ", "Student GPA: ", "Student Registration Date: " ]
+	
+	let jsFile = ["900006361.js", "900668871.js", "903998004.js"]
+	
+	var p;
+	
+	
+	
+function loadDoc() {
+	
+	
+	for(p=0; p<jsFile.length; p++){
+		var txt = "";
+
+			fetch(jsFile[p])
+				.then(function(resp){
+					return resp.json();
+				})
+				.then(function(data){
+					var x;
+					var i = 0;
+
+						while(i < info.length){
+							for (x in data){
+								txt += info[i] + " " + data[x] + "<br>";
+								i++;
+							}
+							txt += "<br>";
+						}
+					document.getElementById("demo").innerHTML = txt;
+					console.log(data);
+			})
+	}
+}	
+	
+</script>
+
+</body>
+</html>
